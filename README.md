@@ -24,3 +24,36 @@ Enjoy a random joke, and keep asking for more until you run out!
 ## Screenshots/Diagrams
 
 ![image](https://github.com/user-attachments/assets/63e246e8-8749-4472-a1e5-a59d12de25ce)
+
+## How to Install/Run
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/deberry-code/dad-joke-search-engine.git
+cd dad-joke-search-engine
+
+
+### 4. Run the App
+
+```bash
+python3 dad_joke_project.py
+
+```
+
+---
+
+## ✨ Features
+
+- Dynamic joke search based on keywords.
+- Random joke selection without repeats.
+- Friendly prompt to fetch more jokes.
+
+---
+
+## 🧩 Future Improvements
+
+- Add option for random jokes without a search term.
+- Save favorite jokes to a local file.
+- Add timer for automatic joke delivery (like "joke of the day").
+- Support "trending jokes" or "top-rated jokes" if API expands.
