@@ -22,3 +22,5 @@ Enjoy a random joke, and keep asking for more until you run out!
 ---
 
 ## Screenshots/Diagrams
+
+![image](https://github.com/user-attachments/assets/63e246e8-8749-4472-a1e5-a59d12de25ce)
