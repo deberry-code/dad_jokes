@@ -25,7 +25,9 @@ def keepgoing():
   jokelist.pop(pos)
   print('\n',newjoke, '\n')
   b=len(jokelist)
-  loop=input("Would you like another one?")
+  loop=input("Would you like another one? ")
+  if loop.upper()=='N':
+     print(f'Thanks for playing!')
   if b==1:
     print('\n', jokelist[0],'\n')
     print(f"That was my last joke about {topic}!\n")
@@ -34,11 +36,13 @@ def keepgoing():
 
 if total_jokes > 1:
   fetchjoke()
-  print(f'Would you like another one?')
+  print(f'Would you like another one? ')
   loop=input("Y/N:")
   if loop.upper()=="Y":
-    for i in range(0, len(jokelist)):
-      keepgoing()
+   keepgoing()
+  elif loop.upper()=="N":
+     print(f'Thanks for playing!')
+  else: print(f'Thanks for playing!')
 
 
 
