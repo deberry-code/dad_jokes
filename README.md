@@ -1,6 +1,6 @@
 # Dad Joke Search Engine
 
-**Dad Joke Search Engine** is a colorful terminal-based app that lets you search for dad jokes by topic, fetching jokes from the [icanhazdadjoke.com](https://icanhazdadjoke.com) API.
+**Dad Joke Search Engine** is a terminal-based app that lets you search for dad jokes by topic, fetching jokes from the [icanhazdadjoke.com](https://icanhazdadjoke.com) API.
 Enjoy a random joke, and keep asking for more until you run out!
 
 ---
