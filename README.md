@@ -32,9 +32,10 @@ Enjoy a random joke, and keep asking for more until you run out!
 ```bash
 git clone https://github.com/deberry-code/dad-joke-search-engine.git
 cd dad-joke-search-engine
+```
 
 
-### 4. Run the App
+### 2. Run the App
 
 ```bash
 python3 dad_joke_project.py
