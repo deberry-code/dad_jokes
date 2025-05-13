@@ -9,44 +9,32 @@ jokeset=requests.get("https://icanhazdadjoke.com/search",headers={"Accept": "app
 from random import choice
 answers=jokeset["results"]
 total_jokes=jokeset["total_jokes"]
-jokelist=[]
-def fetchjoke():
-    for i in answers:
-        j=i['joke']
-        jokelist.append(j)
-    x=choice(jokelist)
-    print(f"\nI've got {len(jokelist)} jokes about {topic}. Here's one: ",x,'\n')
-    jokelist.pop(jokelist.index(x))
-    return jokelist
 
-def keepgoing():
-  newjoke=choice(jokelist)
-  pos=jokelist.index(newjoke)
-  jokelist.pop(pos)
-  print('\n',newjoke, '\n')
-  b=len(jokelist)
-  loop=input("Would you like another one? ")
-  if loop.upper()=='N':
-     print(f'Thanks for playing!')
-  if b==1:
-    print('\n', jokelist[0],'\n')
-    print(f"That was my last joke about {topic}!\n")
-    return
-  else: return jokelist, loop, b
+jokelist = [j["joke"] for j in answers]
+
+def tell_joke(jokelist):
+    if not jokelist:
+        print(f"That was my last joke about {topic}!\n")
+        return False
+    x = choice(jokelist)
+    print(f"\n{x}\n")
+    jokelist.remove(x)
+    return True
+
 
 if total_jokes > 1:
-  fetchjoke()
-  print(f'Would you like another one? ')
-  loop=input("Y/N:")
-  if loop.upper()=="Y":
-   keepgoing()
-  elif loop.upper()=="N":
-     print(f'Thanks for playing!')
-  else: print(f'Thanks for playing!')
-
-
+    print(f"I've got {total_jokes} jokes about {topic}. Here's one:")
+    still_joking = tell_joke(jokelist)
+    while still_joking:
+        loop = input("Would you like another one? (Y/N): ")
+        if loop.upper() == "Y":
+            still_joking = tell_joke(jokelist)
+        else:
+            print("Thanks for playing!")
+            break
 
 elif total_jokes == 1:
-    print(f"I've got one joke about {topic}. Here it is: ",(answers[0]['joke']).strip())
+    print(f"I've got one joke about {topic}. Here it is:\n{answers[0]['joke']}")
 else:
-    print(f"Sorry, I don't have any jokes about {topic}! Please try again.")
+    print(f"Sorry, I don't have any jokes about {topic}! Please try again!")
+
