@@ -43,7 +43,7 @@ python3 dad_joke_project.py
 
 ---
 
-## ✨ Features
+## Features
 
 - Dynamic joke search based on keywords.
 - Random joke selection without repeats.
@@ -51,7 +51,7 @@ python3 dad_joke_project.py
 
 ---
 
-## 🧩 Future Improvements
+## Future Improvements
 
 - Add option for random jokes without a search term.
 - Save favorite jokes to a local file.
